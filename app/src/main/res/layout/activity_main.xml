@@ -16,6 +16,74 @@
         android:padding="16dp">
 
         <!-- Gambar utama -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:paddingBottom="10dp">
+
+            <ImageButton
+                android:id="@+id/btnUndo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_undo"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Undo"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btnRedo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_redo"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Redo"
+                android:padding="10dp"
+                app:layout_constraintStart_toEndOf="@id/btnUndo"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_save"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Simpan"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:text="Undo"-->
+<!--                android:layout_marginEnd="20dp"-->
+<!--                android:textSize="20dp"/>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:text="Redo"-->
+<!--                android:textSize="20dp" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:text="SImpan"-->
+<!--                android:layout_gravity="right"-->
+<!--                android:gravity="right"-->
+<!--                android:textSize="20dp" />-->
+<!--        </LinearLayout>-->
+
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
@@ -126,6 +194,32 @@
                     android:layout_columnWeight="1" />
 
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnHistogram"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:text="Histogram Equalization"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:layout_columnWeight="1" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBlur"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:text="Blur"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnKontrass"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:text="Kontrass"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:layout_columnWeight="1" />
+
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnReset"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:text="Reset"
@@ -137,15 +231,15 @@
         </com.google.android.material.card.MaterialCardView>
 
         <!-- Tombol Simpan -->
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnSave"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Simpan"
-            app:cornerRadius="8dp"
-            app:backgroundTint="@color/purple_700"
-            android:textColor="@color/white"
-            android:layout_marginTop="16dp" />
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/btnSave"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Simpan"-->
+<!--            app:cornerRadius="8dp"-->
+<!--            app:backgroundTint="@color/purple_700"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:layout_marginTop="16dp" />-->
 
     </LinearLayout>
 </ScrollView>
